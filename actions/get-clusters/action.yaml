@@ -1,0 +1,19 @@
+name: 'Get clusters'
+description: 'Given a cluster type (`cloudapps`), return all matching clusters'
+author: 'hosted team'
+
+# Define your inputs here.
+inputs:
+  cluster_type:
+    description: 'Cluster type'
+    required: false
+    default: ''
+
+# Define your outputs here.
+outputs:
+  clusters:
+    description: 'A list of cluster names'
+
+runs:
+  using: node20
+  main: dist/index.js
